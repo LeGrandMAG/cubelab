@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = config('SECRET_KEY')
-load_dotenv(find_dotenv())
+load_dotenv
 # SECURITY WARNING: don't run with debug turned on in production!
 
 ALLOWED_HOSTS = ['*']
@@ -94,7 +94,7 @@ WSGI_APPLICATION = 'wepo.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600, ssl_require=False)
 }
-DATABASES['default'].update(db_from_env)
+
 CREDENTIALS = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

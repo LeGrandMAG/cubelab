@@ -92,9 +92,9 @@ WSGI_APPLICATION = 'wepo.wsgi.application'
 
 
 DATABASES = {
-    'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600, ssl_require=False)
+    'default': dj_database_url.config(conn_max_age=600, ssl_require=False)
 }
-DATABASES['default'].update(db_from_env)
+
 CREDENTIALS = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',

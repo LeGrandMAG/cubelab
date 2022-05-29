@@ -5,7 +5,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
-"""DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': config('DB_ENGINE'),
         'NAME': config('DB_NAME'),
@@ -15,4 +15,3 @@ ALLOWED_HOSTS = ['*']
         'HOST': config('DB_HOST')
     }
 }
-"""

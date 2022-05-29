@@ -54,7 +54,7 @@ DEBUG_PROPAGATE_EXCEPTIONS = True
 # Heroku settings
 django_on_heroku.settings(locals(), staticfiles=False)
 
-##del DATABASES['default']['OPTIONS']['sslmode']
+del DATABASES['default']['OPTIONS']['sslmode']
 
 SECURE_SSL_REDIRECT = True
 CSRF_COOKIE_SECURE = True
