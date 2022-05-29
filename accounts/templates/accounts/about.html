@@ -1,0 +1,59 @@
+{%extends 'base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock link %} 
+
+{%block content%}
+<div id="team_container">
+    <h2>Team members</h2>
+
+
+    <div id="info">
+        <div class="member">
+            <img  class ="team_pic" src="{% static 'images/team/TheBeast.jpg' %}" alt="">
+            <p>The Beast</p>
+            <ul>
+                <li>Project Manager</li>
+                <li>Public Relations in DR Congo</li>
+                <li>Market Research</li>
+            </ul>
+
+
+            <ul>
+                <li>Student at Hankuk University of Foreign Studies (HUFS)</li>
+            </ul>
+        </div>
+        <div class="member">
+            <img  class ="team_pic" src="{% static 'images/team/JJM.jpg' %}" alt="">
+            <p>JjangJjang Man</p>
+            <p>Role</p>
+            <p>Experiences</p>
+        </div>
+        <div class="member">
+            <img  class ="team_pic" src="{% static 'images/team/Tunie.jpg' %}" alt="">
+            <p>Tuni</p>
+            <p>Role</p>
+            <p>Experiences</p>
+        </div>
+        <div class="member">
+            <img  class ="team_pic" src="{% static 'images/team/Edward.jpg' %}" alt="">
+            <p>Edward</p>
+            <p>Role</p>
+            <p>Experiences</p>
+        </div>
+        <div class="member">
+            <img  class ="team_pic" src="{% static 'images/team/Gamma.jpg' %}" alt="">
+            <p>Gamma</p>
+            <p>Role</p>
+            <p>Experiences</p>
+        </div>
+        <div class="member">
+            <img  class ="team_pic" src="{% static 'images/team/Tiger.jpg' %}" alt="">
+            <p>Tiger</p>
+            <p>Role</p>
+            <p>Experiences</p>
+        </div>
+    </div>
+</div>
+{% endblock content%}

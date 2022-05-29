@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta  content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/survey.css">
+  <link rel="stylesheet" href="/assets/css/footer.css">
+    <title>WEPO</title>
+</head>
+<body>
+    
+<section class="section1">
+    <div class="form-title">
+        <h2 style= "text-align: center;">Register Your Product</h2>
+        <p>Enregistrez votre produit en remplissant ce formulaire</p>
+    </div>
+    
+    <form  id="form" method="POST" action="https://script.google.com/macros/s/AKfycbzIcFh2FQh6jntCZTnY1XrFCR42SALycAYzcDC7C6OcsCLIqN55YdOgeDijN7JnuElM/exec">
+
+        <label class="form-elements" for=""><p>Prenom*</p> 
+            <input type="text" name="Name" id="Name" placeholder="Prenom" required>
+        </label>
+        <label class="form-elements" for=""><p>Nom*</p> 
+            <input type="text" name="Name" id="Name" placeholder="Nom" >
+        </label>
+
+        <label class="form-elements" for="Phone_Number"><p>Numero de telephone </p> 
+            <input type="text" name="Phone_Number" id="Phone_Number" placeholder="Phone number "></label>
+            <label class="WhatsApp" for="WhatsApp"><input type="checkbox" name="whatsapp" id="whatsapp" placeholder="Phone number "> Joignable sur WhatsApp</label>
+        <label class="form-elements" for="Messenger"><p>3. What's your  Facebook ID? (For Messenger)</p> 
+            <input type="text" name="Messenger" id="Messenger" placeholder="Messenger ID">
+        <label class="form-elements" for="Quantity"><p>4. How many phone around selling? (For Messenger)</p> 
+            <input type="number" minlength="1" maxlength="10" name="Quantity" id="Quantity" placeholder="Enter your Messenger number here ">
+        
+        <label class = "Communes-text" for="Communes"><p>Communes</p>
+        <select name="Communes" id="Communes">
+            <option value="Bandalungwa">Bandalungwa</option>
+            <option value="barumbu">barumbu</option>
+            <option value="bumbu">bumbu</option>
+            <option value="Gombe">Gombe</option>
+            <option value="Kalamu">Kalamu</option>
+        </select>
+        </label>
+
+        <label class = "Categories-text" for="Categories"><p>Categories</p>
+            <select name="smartphone" id="smartphone">
+                <option value="Smartphone">Smartphone</option>
+                <option value="Tablette">Tablette</option>
+                <option value="barumbu">Television</option>
+                <option value="bumbu">Ordinateur PC</option>
+                <option value="Gombe">Console de Jeu</option>
+                <option value="Kalamu">Moniteur</option>
+                <option value="Kalamu">Appareil Photos & Camera</option>
+            </select>
+            </label>
+
+        <label class="Desription" for="Description">
+            <p>Description</p>
+            <textarea  name="Description" id="Description" cols="30" rows="10" placeholder="Descrivez le produit avec le plus de details que possible"></textarea>
+        </label>
+
+        <label class="images" for="images"><p>Images du produit </p> 
+            <input type="file" name="image" id="images" multiple></label>
+        <label class="form-elements" for="Quantity"><p>4. How many phone around selling? (For Messenger)</p> 
+            <input type="image" minlength="1" maxlength="10" name="image" id="Quantity" placeholder="Enter your Messenger number here ">
+
+        
+        <input id="submit" onclick="window.location.href = 'https://magmukendi.com'" type="submit" name="Submit" value="Submit">
+    </form>
+
+    <div class="section1-2">
+    </div>
+</section>
+
+<footer id="footer">
+    <div class="footer-text">
+        <a href="">Term of usage</a>
+        <a href="">User's code of conduct</a>
+        <a href="">kakaopayme</a>
+    </div>
+    <p></p>
+    <p >Copyright Mag Mukendi 2022</p>
+</footer>
+
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+{%extends 'base.html' %}
+{% load static %} 
+
+{% block link %}{% endblock link %}
+
+
+{% block content %}
+
+<div id="thankyou_product">
+
+    <h2>Thank you for registering your product</h2>
+    {% for product in products %}
+    <div class="product">
+        <div class="product-detail">
+        <p>Product category: {{product.cat}}</p>
+        <p>Product name : {{product.model}}</p>
+        <p>Price: ${{product.price}}</p>
+        <p>Memoire: {{product.memory}}</p>
+        <p>Niveau de battery: {{product.battery}}%</p>
+        <p>Petite fissure: {{product.fissure1}}</p>
+        <p>Grosse. fissure : {{product.fissure2}}</p>
+        {% if product.is_sold == False %}
+            <p class = "not_sold">Is not sold yet</p>
+        {% else %}
+            <p class = "sold">Is already sold</p>
+        {% endif %}
+        <hr>
+        </div>
+        <img class= "p-product" src="{% if product.image %}{{product.image.url }}{% else %} 
+        {% static 'images/no_image.png' %}{% endif %}" alt="">
+        
+
+
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}

@@ -1,0 +1,71 @@
+{%extends 'base.html' %}
+{% load static %}
+{% block link %}
+<link rel="stylesheet" href="{% static 'css/form.css' %}"> 
+{% endblock link %}
+{%block content %}
+    <div class="Form">
+     <div class="forma">
+    <h1>Thank you for filling out this survey</h1>
+    <form id ="product_form" action="" method="post">
+        
+        {% csrf_token %}
+        <form action="" method="post">
+        
+            
+        <label for="id_nom">
+            <input type="text" name="nom" maxlength="150" required="" id="id_nom" placeholder=" Insert the product name">
+        </label>
+        
+        <label for="id_imei">
+            <input type="text" name="imei" maxlength="150" required="" id="id_imei" placeholder="insert IMEI number">
+        </label>
+        
+         <div id="select_container">
+        <select name="cat" class = "select" id="id_cat">
+            {%for option in form.cat%}
+            <optiion value = {{option}}>{{option}}</optiion>
+            {%endfor%}
+        </select>
+
+        <select name="model" class = "select" id="id_model">
+            {%for option in form.model%}
+            <optiion value = {{option}}>{{option}}</optiion>
+            {%endfor%}
+        </select>
+
+        <select name="memory" class = "select" id="id_memory">
+            {%for option in form.memory%}
+            <optiion value = {{option}}>{{option}}</optiion>
+            {%endfor%}
+        </select>
+        </div>   
+        <label for="id_price">
+            <input type="text" name="price"  step="10" required="" id="id_price" min="0" placeholder="Price in dollars">
+        </label>
+        <label for="id_fissure1">
+            <input type="text" name="fissure1"  id="id_fissure2"  placeholder="Small scratch">
+        </label>
+
+        <label for="id_fissure2">
+            <input type="text" name="fissure2"  id="id_fissure2"  placeholder="Big scratch">
+        </label>
+
+        <label for="battery">
+            <input type="text" name="battery"  id="id_battery"  placeholder="Battery level">
+        </label>
+        
+        
+        <label for ="id_image">
+            <input type="file" name="image" required="" id="image" multiple>
+        </label>
+        <input type="submit" id="product_submit" value="Submit">
+    </form>
+    {% if meme == 1 %}
+    <p>Something is wrong with your form</p>
+    <p>{{form.as_p}}</p>
+    {% endif %}
+    </div> 
+</div>
+
+    {% endblock content %}

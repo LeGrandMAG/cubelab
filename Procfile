@@ -1,0 +1,1 @@
+web: gunicorn wepo.wsgi:application --log-file - --log-level debug
