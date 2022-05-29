@@ -19,7 +19,6 @@ from dotenv import load_dotenv, find_dotenv
 """BASE_DIR = Path(__file__).resolve().parent.parent.parent"""
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 """BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(os.path.join(__file__,os.pardir))))"""
-DEBUG = config('DEBUG', default=True, cast=bool)
 
 
 # Quick-start development settings - unsuitable for production
@@ -89,7 +88,7 @@ WSGI_APPLICATION = 'wepo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-load_dotenv(find_dotenv)
+
 
 DATABASES = {
     'default': dj_database_url.config(default='sqlite:///db.sqlite3', conn_max_age=600, ssl_require=False)
