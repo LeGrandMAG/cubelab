@@ -20,7 +20,7 @@ from dotenv import load_dotenv, find_dotenv
 BASE_DIR = Path(__file__).resolve().parent.parent.parent
 """BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(os.path.join(__file__,os.pardir))))"""
 
-
+#load_dotenv(find_dotenv)
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'accounts',
     'user_visit',
     'django_generate_secret_key',
+    'django_extensions'
     
 ]
 
