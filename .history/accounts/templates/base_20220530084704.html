@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    <link rel="stylesheet" href="{% static 'css/media_queries.css' %}">
+    <link rel="stylesheet" href="{% static 'css/wepo-navbar.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+    <script type='text/javascript'
+    <link rel="icon" type="image/x-icon" href="{% static 'images/icon.ico' %}">
+    {% block link %}
+    {% endblock link %} 
+    <script src="https://kit.fontawesome.com/cd3abaa76f.js" crossorigin="anonymous"></script>
+    <title>  {% block title %} Welcome to WEPO {% endblock title %} </title>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="nav-bar">
+            <div class="left">
+                <a href="{% url 'Home' %}"> <img class="wepo-logo-mini" src="{% static 'images/wepo_logo_full.png' %}" alt=""></a>
+            </div>
+            <!--<div class="center">
+                {%if user.prenom %}
+                <p id ="user-name">Welcome, {{user.prenom}}</p>
+                {%endif %}
+                <a href="{% url 'About' %}">A propos</a>
+                
+                <a href="{% url 'thankyou' %}">Products</a>
+                <a href="{% url 'ProductRegistration' %}">Devenir vendeur</a>
+                <a href="{% url 'login' %}">Login</a>         
+            </div>-->
+            <div class="right"> 
+                <a href="https://www.instagram.com/wearewepo" target="_blank" ><i class="fa-brands fa-instagram fa-xl"></i></a>
+                <a href="https://www.facebook.com/wearewepo" target="_blank" ><i class="fa-brands fa-facebook fa-xl"></i></a>
+                <a href="https://wa.me/821090261605" target="_blank" ><i class="fa-brands fa-whatsapp fa-xl"></i></a>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+{%block content %}
+
+{% endblock content %}
+
+
+
+
+</body>
+</html>
+
