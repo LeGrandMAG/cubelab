@@ -62,7 +62,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, 'live-static', 'static-root')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'live-static', 'media-root')
 
-STATICFILES_STORAGE = "whitenoise.storage.CompressedStaticFilesStorage"
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 DEBUG_PROPAGATE_EXCEPTIONS = True
 # Heroku settings
 django_on_heroku.settings(locals(), staticfiles=False)
