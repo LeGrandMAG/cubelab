@@ -9,6 +9,8 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required 
 from django.contrib.auth import authenticate, login, logout
 
+from pathlib import Path
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Home view
@@ -34,8 +36,8 @@ def Home(request):
             
         sleep(2)
         return redirect('Home')
-
     
+    print(str(BASE_DIR) + "HERE")
     
     return render(request, 'accounts/index.html')
 

@@ -1,4 +1,0 @@
-const submitForm = function (){
-    alert
-
-}
